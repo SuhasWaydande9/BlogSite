@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content%}
+{% include 'sidebar.html'%}
+<link rel="stylesheet" type="text/css" href="{% static 'Auth/Signup.css' %}">
+<div class="Child-Wrapper">
+    <form method="POST" action="register">
+        {% csrf_token %}
+        Username : <input type="text" name="username" required=true>
+        Email : <input type="email" name="email" required=true>
+        Password : <input type="password" name="password" required=true>
+        <div class="Btn">
+            <button type="submit">Register</button>
+            <button onclick="location.href = '/auth/Login'">Log-In</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content%}

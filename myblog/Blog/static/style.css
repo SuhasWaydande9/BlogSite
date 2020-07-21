@@ -1,0 +1,234 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    min-height: 100vh;
+    overflow: scroll;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    width: 1224px;
+    margin: auto;
+    padding-bottom: 10px;
+    min-height: 100vh;
+}
+
+nav {
+    background: #B5E6EC;
+    height: 40px;
+    margin: 8px 0px;
+    box-shadow: 2px 3px 2px #b5b5b5;
+    position: fixed;
+    width: 1224px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.Title {
+    margin: auto 0px;
+    color: darkcyan;
+}
+
+.content {
+    display: flex;
+    padding: 60px 50px;
+
+}
+
+section.Section1 {
+    margin: 0px 50px 0px 0px;
+    height: 80vh;
+    box-shadow: 2px 3px 2px #bfbfbf;
+    border-top: 1px solid black;
+    border-left: 5px solid #9bbaff;
+    width: 230px;
+    flex-direction: column;
+    min-height: 450px;
+    background-color: white;
+    z-index: 1;
+}
+
+.categories {
+    flex: 2;
+}
+
+.categories h1 {
+    padding: 10px 15px;
+}
+
+.categories li {
+    list-style: none;
+    width: 88%;
+    height: 30px;
+    padding: 0px 15px;
+    background-color: #9bbaff;
+    margin: 10px 0px;
+    line-height: 170%;
+}
+
+.Editor {
+    flex-basis: 60px;
+    display: grid;
+    padding: 5px;
+}
+
+.Logger {
+    flex-basis: 80px;
+    display: grid;
+    padding: 5px;
+}
+
+.Editor button {
+    background-color: #c7d2ea;
+    border: none;
+    border-radius: 5px;
+}
+
+.Logger button {
+    border: none;
+    margin: 2px 0px;
+    background-color: #abeac1;
+}
+
+a {
+    display: block;
+    text-decoration-line: none;
+    color: black;
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+}
+.User {
+    display: flex;
+    width: 40%;
+    margin: 0px 15px;
+}
+.User h3 {
+    margin: auto;
+}
+span.username {
+    color: red;
+}
+
+.Logo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px 15px;
+}
+.Logo button {
+    border-style: none;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: black;
+    border-left: 1px solid #ff9191;
+    border-right: 1px solid #ff9191;
+}
+
+.User button {
+    border-style: none;
+    padding: 5px 10px;
+    background-color: #ff9191;
+    color: white;
+}
+
+button.Menu {
+    display: none;
+}
+
+footer {
+    background-color: #e7e7e7;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    bottom: 0;
+}
+footer h3 {
+    margin: auto 0;
+}
+
+.SocialIcon {
+    width: 50px;
+    height: 50px;
+    margin: 0px 5px;
+}
+
+.SocialLinks {
+    display: flex;
+}
+.MobileLog-out, .MobileHome{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        width: auto;
+    }
+    section.Section1 {
+        display: none;
+        width: 350px;
+        position: absolute;
+        margin-top: 50px;
+        height: 80vh;
+    }
+    nav{
+        width: 100vw;
+    }
+    .content {
+        padding: 0;
+    }
+
+    .User h3 {
+        display: none;
+    }
+    .User{
+        width: 25%;
+    }
+    .User, .Logo{
+        margin: 0px 5px;
+    }
+    .User button, .Logo button{
+        margin: 0px 5px;
+        display: none;
+    }
+    button.Menu {
+        display: block;
+        border: none;
+        width: 80px;
+        background-color: #91e1c5;
+    }
+    .Logo {
+        justify-content: center;
+    }
+
+    .Title {
+        margin: auto 10px;
+    }
+
+    .MobileLog-out, .MobileHome{
+        display: block;
+        background-color: #d3c8ff;
+        color: black;
+        height: 50px;
+        margin: 5px 0px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: none;
+    
+    }
+
+    footer {
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        position: -webkit-sticky;
+        bottom: 0px;
+        position: fixed;
+        background-color: white;
+    }
+    
+}

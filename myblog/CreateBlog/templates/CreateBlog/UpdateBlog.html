@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content%}
+{% include 'sidebar.html'%}
+<link rel="stylesheet" type="text/css" href="{% static 'CreateBlog/createblog.css' %}">
+<div class="Child-Wrapper">
+    <section class="section1">
+        <form method="POST" action="/CreateBlog/postupdate/{{ThatBlog.id}}">
+            {% csrf_token %}
+            Title :
+            <input class="title" type="text" name="title" required=true value="{{ThatBlog.title}}">
+            Story :
+            <textarea class="textarea" name="story" id="" cols="100" rows="40">{{ThatBlog.story}}</textarea>
+            {{ form }}
+            <button class="PostBlogBtn"type="submit">Submit</button>
+        </form>
+    </section>
+    <!-- <section class="section2">
+        <h1 style="position: fixed; margin: -35px 0px 0px 0px;">My Work</h1>
+        {% for Blog in UserBlogs %}
+        <div class="Blogs" id="{{Blog.id}}" username="{{Blog.user.username}}">
+            
+            <div class="Blog"  onclick="location.href='/Blog/{{Blog.id}}'">
+                <h1>{{Blog.title}}</h1>
+                <p >{{Blog.story|truncatewords:"30"}}</p>
+            </div>
+            <script>
+                const wannaDelete = (id)=>{
+                    let conf = confirm("Do You Want To delete This Blog")
+                    if (conf){
+                        location.href='/CreateBlog/deleteblog/'+id
+                    }   
+                }
+            </script>
+            <div class="CRUD">
+                <button onclick="location.href='/CreateBlog/updateblog/{{Blog.id}}'">Up</button>
+                <button onclick="wannaDelete('{{Blog.id}}')" >Del</button>
+            </div>
+        </div>
+        {% endfor %}
+    </section> -->
+    
+</div>
+
+{% endblock content%}

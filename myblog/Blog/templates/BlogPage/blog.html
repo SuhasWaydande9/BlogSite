@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content%}
+{% include 'sidebar.html'%}
+<link rel="stylesheet" type="text/css" href="{% static 'BlogPage/blog.css' %}">
+
+    <section class="Section2">
+        <div class="BlogContainer">
+                <div class="thisBlog">
+                    <h1>{{Blog.title}}</h1>
+                    <p>{{Blog.story}}</p>
+                </div>
+        </div>
+    </section>
+{% endblock content%}

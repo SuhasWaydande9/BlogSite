@@ -1,0 +1,24 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    width: 1224px;
+    margin: auto;
+}
+
+nav { 
+    background: #B5E6EC;
+    height: 40px;
+    margin: 8px 0px;
+    box-shadow: 2px 3px 2px #b5b5b5;
+    position: fixed;
+    width: 1224px;
+}
+
+.Title {
+    line-height: 170%;
+    color: darkcyan;
+}

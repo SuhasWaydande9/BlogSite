@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content%}
+{% include 'sidebar.html'%}
+<link rel="stylesheet" type="text/css" href="{% static 'Auth/Login.css' %}">
+<div class="Child-Wrapper">
+    <form method="POST" action="loginto">
+        {% csrf_token %}
+        Username : <input type="text" name="username" required=true>
+        Password : <input type="password" name="password" required=true>
+        <div class="Btn">
+            <button type="submit">Log-In</button>
+            <button onclick="location.href='/auth/Signup'">Creat Account</button>
+        </div>
+    </form>
+    {% for message in messages %}
+        <div class="message">
+            <p>{{message}}</p>
+        </div>
+    {% endfor %}
+
+</div>
+
+{% endblock content%}

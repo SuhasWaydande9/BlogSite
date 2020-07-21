@@ -1,0 +1,185 @@
+.Wrapper {
+    padding: 80px 0px;
+}
+
+.content {
+    display: flex;
+    padding: 10px 50px;
+}
+
+.section1 form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, form button {
+    margin: 10px 0px;
+}
+
+select#id_category {
+    width: 100px;
+    height: 30px;
+    margin: 5px 0px;
+}
+
+.Child-Wrapper {
+    display: flex !important;
+}
+.title{
+    height: 30px; font-size: 20px; width: 400px;
+}
+.textarea{
+    font-size: 16px; width: 800px; height: 300px;
+}
+.PostBlogBtn{
+    width: 80px; padding: 5px 0px;
+}
+
+section.section2 {
+    max-width: unset;
+    padding: 5px 5px;
+    margin: 0px 10px;
+    /* border: 1px solid; */
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+section.section2::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+section.section2::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+}
+ 
+section.section2::-webkit-scrollbar-thumb {
+    background-color: #7271c7;
+}
+
+.section1 input, .section1 textarea {
+}
+
+.section2 .Blogs {
+    display: flex;
+    justify-content: space-between;
+    overflow-y: hidden;
+    margin: 10px 0px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #212529;
+    background-color: #fbfbfb;
+    max-height: 130px;
+    overflow: hidden;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 1px 2px 1px #bbbbbb;
+    border-top: 1px solid #0014ff;
+    border-left: 3px solid #7989ff;
+}
+
+.section2 .Blogs h1 {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.Blog {
+
+}
+
+.CRUD {
+    display: flex;
+    flex-direction: column;
+}
+
+.update{
+    background-image: url("https://img.icons8.com/material/64/000000/edit--v1.png");
+    background-size: contain;
+    background-color: #c7d6ff;
+    width: 20px;
+    height: 20px;
+    border: none;
+    margin: 2px 0px;
+}
+.tooltip{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.update .tooltip, .delete .tooltip {
+    right: 13%;
+}
+
+.delete{
+    background-image: url("https://img.icons8.com/ios-glyphs/30/000000/delete-sign.png");
+    background-size: contain;
+    background-color: #ffc7c7;
+    width: 20px;
+    height: 20px;
+    border: none;
+    margin: 2px 0px;
+}
+
+.update:hover .tooltip{
+    visibility: visible;
+}
+.delete:hover .tooltip{
+    visibility: visible;
+}
+section.Section1{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    /* .section1 input, .section1 textarea{
+        width: 100vw;
+        font-size: 1.2rem;
+    } */
+    .content {
+        display: flex;
+        padding: 0%;
+    }
+    select#id_category {
+        width: 200px;
+    }
+    .PostBlogBtn {
+        width: 150px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    section.section2 {
+        width: 100vw;
+        margin: 60px 0px;
+        max-height: 500px;
+    }
+
+    .Child-Wrapper{
+        flex-direction: column;
+    }
+    footer {
+        position: relative !important;
+    }
+    .section1 input, .section1 textarea {
+        width: 95vw;
+    }
+    
+    form input, form textarea, form button {
+        margin: 0;
+    }
+    form{
+        margin: 0px 10px;
+    }
+    section.Section1 {
+        margin-top: 0px;
+
+    }
+}

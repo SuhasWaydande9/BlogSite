@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Blog This</title>
+</head>
+<body>
+    <div class="Base">
+        <nav class="Navbar">
+            <script>
+                const navbar = ()=>{
+                    nav =document.querySelector('.Section1');
+                    
+                    if (nav.style.display == 'flex'){
+                        nav.style.display = 'none';
+                    }else{
+                        nav.style.display = 'flex';
+                    }
+                }
+            </script>
+            <button class="Menu" onclick=navbar() >Menu</button>
+            <div class="Logo">
+                <h2 class="Title">&lt; S.DEV &gt;</h2>
+                <button onclick="location.href='/'">Home</button>
+            </div>
+            <div class="User">
+                <h3>User : <span class="username">{% firstof username 'Anonymous'%}</span></h3>
+                <button onclick="location.href='/auth/logout'" >Log-out</button>
+            </div>
+            
+        </nav>
+    </div>
+    <div class="Wrapper">
+        {% block content%}
+
+        {% endblock%}
+        </div>
+    </div>
+    <footer>
+        <h3>Copyright&copy;<span style="color: red;">SuhasWaydande</span></h3>
+        <div class="SocialLinks">
+            <div class="SocialIcon" title="Go to My Facebook Page" style="background-image: url(https://img.icons8.com/ios/50/000000/facebook.png)"><a href="https://www.facebook.com/suhas.waydande.6" target="_blank"></a></div>
+            <div class="SocialIcon" title="Go to My Github Page" style="background-image: url(https://img.icons8.com/ios/50/000000/github.png)"><a href="https://github.com/SuhasWaydande9" target="_blank"></a></div>
+            <div class="SocialIcon" title="Message Me On Whatsapp" style="background-image: url(https://img.icons8.com/ios/50/000000/whatsapp.png)"><a href="https://wa.me/919766908348" target="_blank"></a></div>
+            <div class="SocialIcon" title="Go to My Youtube Channel" style="background-image: url(https://img.icons8.com/ios/50/000000/youtube-squared.png)"><a href="https://www.youtube.com/channel/UCGW7hE-5qAMX56qZGhFSj9g?view_as=subscriber" target="_blank"></a></div>
+        </div>
+    </footer>
+    <script src="{% static 'MainPage/script.js' %}"></script>
+</body>
+</html>
